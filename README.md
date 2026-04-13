@@ -11,7 +11,7 @@ Swat Valley, KPK, Pakistan
 - Slope derived from DEM (GEE)
 - CHIRPS Rainfall data (GEE)
 - Flood Extent Label (GEE)
-
+Note : Gee files above 25 MB so upload here is not possible 
 ## Methods
 - Data balancing using SMOTE
 - TensorFlow Neural Network
