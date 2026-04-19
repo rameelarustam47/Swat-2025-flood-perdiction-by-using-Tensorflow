@@ -1,31 +1,71 @@
-# Swat KPK Flood Prediction 2025
-## Using TensorFlow Deep Learning
+# Flood Prediction in Swat Valley (2025) using TensorFlow
 
-## Study Area
-Swat Valley, KPK, Pakistan
+## 🌊 Problem Statement
 
-## Data Used
-- Sentinel-1 SAR Before Flood (GEE)
-- Sentinel-1 SAR During Flood (GEE)
-- SRTM DEM 30m (GEE)
-- Slope derived from DEM (GEE)
-- CHIRPS Rainfall data (GEE)
-- Flood Extent Label (GEE)
-Note : Gee files above 25 MB so upload here is not possible 
-## Methods
-- Data balancing using SMOTE
-- TensorFlow Neural Network
-- Binary classification
+This project develops a deep learning model to predict flood occurrence in **Swat Valley, Khyber Pakhtunkhwa, Pakistan**, using multi-source remote sensing and environmental data.
 
-## Results
-- Test Accuracy: 99.88%
-- Balanced dataset: 127,320 samples
-- No Flood F1: 1.00
-- Flood F1: 1.00
+---
 
-## Tools Used
-- Google Earth Engine
-- Google Colab
-- TensorFlow
-- Scikit-learn
-- Rasterio
+## 📍 Study Area
+
+Swat Valley
+
+---
+
+## 📊 Data Sources
+
+All datasets were processed in Google Earth Engine:
+
+* Sentinel-1 SAR (Pre-flood conditions)
+* Sentinel-1 SAR (During flood events)
+* SRTM DEM (30m resolution)
+* Slope derived from DEM
+* CHIRPS rainfall data
+* Flood extent labels
+
+> Note: Large GEE datasets (>25MB) were not uploaded in this repository.
+
+---
+
+## 🧠 Methodology
+
+* Feature extraction from SAR and DEM data
+* Terrain-informed variables (elevation, slope) used as hydrological proxies
+* Data balancing using SMOTE
+* Binary classification using TensorFlow neural network
+
+---
+
+## 🌐 Physically-Informed Component
+
+The model incorporates **terrain and hydrological structure (DEM, slope, rainfall patterns)** to guide learning beyond purely statistical relationships.
+
+---
+
+## 📈 Results
+
+* Test Accuracy: **99.88%**
+* Dataset size: 127,320 samples
+* F1-score (No Flood): 1.00
+* F1-score (Flood): 1.00
+
+> The model shows strong performance in distinguishing flood and non-flood conditions, although further validation on unseen basins is required for generalization.
+
+---
+
+## 🛠️ Tools & Technologies
+
+* Google Earth Engine
+* TensorFlow
+* Scikit-learn
+* Google Colab
+* Rasterio
+
+---
+
+## 🎯 Future Work
+
+* Transfer learning to other river basins
+* Integration with real-time rainfall forecasting
+* Coupling with hydrological simulation models
+
